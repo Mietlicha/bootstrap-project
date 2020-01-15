@@ -9,7 +9,7 @@ body {
 
 /*Navbar*/
 .bg-violet {
-  background-color: rgb(63, 8, 95);
+  background-color: rgb(58, 47, 85);
 }
 
 .nav-item {
@@ -23,10 +23,19 @@ body {
 
 /*Slider*/
 
+.slider {
+  position: relative;
+}
+
 .carousel-item {
   width: 100%;
   height: auto;
 }
+
+.carousel-item img {
+  object-fit: cover;
+}
+
 .carousel-indicators > li {
   width: 10px;
   height: 10px;
@@ -36,8 +45,14 @@ body {
 /*wyśrodkowanie DIVA translateY!!!!!*/
 .carousel-caption {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .btn-outline-primary {
@@ -50,13 +65,54 @@ body {
 }
 
 /*content*/
+/* .main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.item {
+  max-width: 300px;
+  min-width: 100px;
+  height: auto;
+}
+
 figcaption {
   text-align: center;
 }
 
+.photo {
+  width: 100%;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.road {
+  /* min-height: 300px; */
+  background: linear-gradient(
+      111.36820033167237deg,
+      rgba(122, 122, 122, 0.5) 4.927083333333334%,
+      rgba(92, 91, 91, 0.5) 97.84374999999999%
+    ),
+    url('Bootstrap Website Files/img/map.jpg') center/cover;
+  color: white;
+}
+
+.road-item {
+  max-width: 500px;
+}
 /*footer*/
 footer {
-  background-color: rgb(124, 28, 180);
+  background: linear-gradient(
+      111.36820033167237deg,
+      rgba(37, 39, 39, 0.3) 4.927083333333334%,
+      rgba(66, 63, 66, 0.3) 97.84374999999999%
+    ),
+    url('Bootstrap Website Files/img/road.jpg') center/cover;
   color: #fff;
   padding: 3rem 1.5rem;
 }
@@ -65,32 +121,18 @@ footer {
   padding: 0 1rem;
 }
 
-.fa-bomb {
+.fa-compass {
   font-size: 4rem;
 }
 
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 40%;
-    transform: translateY(-50%);
-  }
-
-  .carousel-caption h1 {
-    font-size: 2rem;
+@media (max-width: 900px) {
+  html {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 500px) {
-  .carousel-caption {
-    top: 33%;
-    transform: translateY(-50%);
-  }
-
-  .carousel-caption h1 {
-    font-size: 1.7rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.7rem;
+  html {
+    font-size: 9px;
   }
 }
